@@ -1,0 +1,226 @@
+* {
+  border: none;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: #1b1b1b;
+  margin: 8px 8px 8px 0px;
+}
+header {
+  height: 100px;
+  padding: 10px;
+  font-size: 2em;
+  color: white;
+  background-color: rgb(39, 39, 39);
+}
+.logo {
+  height: 70px;
+  margin-right: 20px;
+}
+.icon {
+  height: 50px;
+  margin-right: 20px;
+}
+.container {
+  background: #242424;
+  margin: 10px;
+}
+.text {
+  padding: 0;
+  height: 125px;
+  width: 100%;
+  padding-left: 20px;
+  color: white;
+  background: rgb(0, 0, 0, 2);
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 5px #000;
+}
+.heading {
+  font-family: "Press Start 2P", cursive;
+}
+.title {
+  margin-right: 60px;
+  font-weight: bold;
+  font-size: 24vw;
+}
+.description {
+  max-width: 900px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+.pokedex {
+  max-width: 2000px;
+  display: grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
+  padding-inline-start: 0;
+}
+.card {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  list-style: none;
+  padding: 40px;
+  margin: 5px;
+  color: #222;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+}
+.card::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 45%;
+  border-radius: 100%;
+  background-color: #fff;
+  opacity: 0.7;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+}
+.card:hover {
+  animation: bounce 0.5s linear;
+}
+.card-title {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  font-size: 32px;
+  font-weight: normal;
+  position: relative;
+  z-index: 2;
+}
+.card-subtitle {
+  margin-top: 5px;
+  color: #666;
+  font-weight: lighter;
+  position: relative;
+  z-index: 2;
+}
+.card-image {
+  height: 200px;
+  position: relative;
+  z-index: 2;
+}
+@keyframes bounce {
+  20% {
+    transform: translateY(-6px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+
+  80% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #111;
+}
+.steel {
+  background-color: #f4f4f4;
+}
+.fire {
+  background-color: #fddfdf;
+}
+.grass {
+  background-color: #defde0;
+}
+.electric {
+  background-color: #fcf7de;
+}
+.water,
+.ice {
+  background-color: #def3fd;
+}
+.ground {
+  background-color: #f4e7da;
+}
+.rock {
+  background-color: #d5d5d4;
+}
+.fairy {
+  background-color: #fceaff;
+}
+.poison {
+  background-color: #98d7a5;
+}
+.bug {
+  background-color: #f8d5a3;
+}
+.dragon {
+  background-color: #97b3e6;
+}
+.psychic {
+  background-color: #eaeda1;
+}
+.flying {
+  background-color: #f5f5f5;
+}
+
+.fighting {
+  background-color: #e6e0d4;
+}
+.normal {
+  background-color: #f5f5f5;
+}
+.ghost {
+  background-color: #dfb9d7;
+}
+.bottom_content {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+  text-align: center;
+}
+.bottom_content span {
+  color: #656565;
+}
+.bottom_content a {
+  color: #c7c4c4;
+  text-decoration: none;
+}
+.bottom_content a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 700px) {
+  header {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    font-size: 15px;
+  }
+  .text {
+    margin: 5px;
+  }
+  .title {
+    font-size: 35px;
+    margin: 6px;
+  }
+  .description {
+    font-size: 15px;
+  }
+}
+@media (min-width: 700px) {
+  .text {
+    display: flex;
+    align-items: center;
+  }
+  .title {
+    font-size: 40px;
+  }
+
+}

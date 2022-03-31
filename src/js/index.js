@@ -1,6 +1,6 @@
 const getPokemonUrl = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
-const generatePokemonPromisses = () =>
+const generatePokemonPromises = () =>
   Array(151)
     .fill()
     .map((_, index) =>
@@ -18,7 +18,7 @@ const generateHTML = (pokemons) =>
             <h2 class="card-title">${id}. ${name}</h2>
             <p class="card-subtitle">${elementTypes.join(" | ")}</p>
         </li>
-`;
+      `;
     return accumulator;
   }, "");
 
@@ -27,6 +27,6 @@ const insertPokemonsIntoPage = (pokemons) => {
   ul.innerHTML = pokemons;
 };
 
-const pokemonPromisses = generatePokemonPromisses();
+const pokemonPromises = generatePokemonPromises();
 
-Promise.all(pokemonPromisses).then(generateHTML).then(insertPokemonsIntoPage);
+Promise.all(pokemonPromises).then(generateHTML).then(insertPokemonsIntoPage);
